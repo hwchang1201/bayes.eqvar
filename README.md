@@ -1,6 +1,8 @@
-# bayes.eqvar
+# Order-based Structure Learning without Score Equivalence
 
-We have 3 experiment types in this code. Each type of experiment would give us replication of the results (Figures and Tables) in the paper.
+This repository provides an implementation of the paper and demonstrates the reproducibility for the three experiment types in the paper.
+
+# Quick start
 
 ## 1. experiment_type == "among" (Table 1, Table 2 and Table 3)
 
