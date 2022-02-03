@@ -1,6 +1,6 @@
 # bayes.eqvar
 
-We have 5 experiment types in this code. Each type of experiment would give us replication of the results (Figures and Tables) in the paper.
+We have 3 experiment types in this code. Each type of experiment would give us replication of the results (Figures and Tables) in the paper.
 
 ## 1. experiment_type == "among" (Table 1 and Table 2.)
 
@@ -39,8 +39,16 @@ Rscript run.R
 The experiment is to draw a mixing diagram to show chains with three neighborhoods are reasonably mixing well in moderate number of nodes. The output is three mixing plots. An example of the bash code is below.
 
 ```bash
-Rscript run.R -x "mixing"
+Rscript run.R -x "mixing" -m "ORDER"
 ```
+
+### description of passing variables.
+
+Rscript run.R
+
+-x "mixing" : it indicates that the experiment is for the mixing behavior chapter.
+
+-m c("ORDER", "MINIMAP") : choosing between 2 models.
 
 ## 3. experiment_type == "misspecify" (Figure 2.)
 
@@ -48,12 +56,4 @@ The experiment is to draw boxplots of hamming distance according to the degree o
 
 ```bash
 Rscript run.R -x "misspecify"
-```
-
-## 3. experiment_type == "within" (Figure 4.)
-
-The experiment is to compare the performance within our method ("ORDER"), within ("RB", "unweighted","ITD"). The output is a set log files of performance table and plots. An example of the bash code is below.
-
-```bash
-Rscript run.R -x "within"
 ```
