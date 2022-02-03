@@ -2,7 +2,7 @@
 
 We have 3 experiment types in this code. Each type of experiment would give us replication of the results (Figures and Tables) in the paper.
 
-## 1. experiment_type == "among" (Table 1 and Table 2.)
+## 1. experiment_type == "among" (Table 1, Table 2 and Table 3)
 
 The experiment is to compare the performance of our method ("ORDER") with that of other competing methods ("TD", "LISTEN", "GDS"). The output is log files of performance table. An example of the bash code is below.
 
@@ -34,7 +34,7 @@ Rscript run.R
 
 -i 0.3  : Choosing the value of degree of misspecification. (numeric in (0, 1); only when t == "mis")
 
-## 2. experiment_type == "mixing" (Figure 1.)
+## 2. experiment_type == "mixing" (Fig. 1, Fig. 6 and Fig. 7)
 
 The experiment is to draw a mixing diagram to show chains with three neighborhoods are reasonably mixing well in moderate number of nodes. The output is three mixing plots. An example of the bash code is below.
 
@@ -50,7 +50,7 @@ Rscript run.R
 
 -m c("ORDER", "MINIMAP") : choosing between 2 models.
 
-## 3. experiment_type == "misspecify" (Figure 2.)
+## 3. experiment_type == "misspecify" (Fig. 2.)
 
 The experiment is to draw boxplots of hamming distance according to the degree of misspecification for three models; "ORDER","TD", "LISTEN". The output is a set boxplots of hamming distance according to the degree of misspecification. An example of the bash code is below.
 
