@@ -15,14 +15,23 @@ Rscript run.R -x "among" -m "ORDER" -t 'unif' -N 30 -n 1000 -p 40 -s 1 -e 0.1 -l
 Rscript run.R
 
 -x "among" : it indicates that the experiment is among competing models.
--m c("ORDER","TD", "LISTEN","GDS") : choosing among 4 models
+
+-m c("ORDER","TD", "LISTEN","GDS") : choosing among 4 models.
+
 -t c("unif", "mis", "gauss", "same") : choosing among 4 options for signals.
+
 -N 30  : Choosing the number of core for parallel computings. (int)
+
 -n 1000  : Choosing the number of samples (int)
+
 -p 40  : Choosing the number of nodes (int)
+
 -s 1  : Choosing the value of error variance (numeric)
+
 -e 0.1  : Choosing the value of edge probability (numeric in (0, 1))
+
 -l 0.3  : Choosing the value of lower bound of signal size (numeric)
+
 -i 0.3  : Choosing the value of degree of misspecification. (numeric in (0, 1); only when t == "mis")
 
 ## 2. experiment_type == "mixing" (Figure 1.)
