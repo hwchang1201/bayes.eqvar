@@ -1,10 +1,10 @@
 # Order-based Structure Learning without Score Equivalence
 
-This repository provides an implementation of the paper and demonstrates the reproducibility for the three experiment types in the paper.
+This repository provides an implementation of the paper and demonstrates the reproducibility for the seven experiment types in the paper.
 
 # Quick start
 
-## 1. experiment_type == "among" (Table 1, Table 2 and Table 3)
+## 1. experiment_type == "among" (Table 1, Table 4 and Table 5)
 
 The experiment is to compare the performance of our method ("ORDER") with that of other competing methods ("TD", "LISTEN", "GDS"). The output is log files of performance table. An example of the bash code is below.
 
@@ -59,3 +59,58 @@ The experiment is to draw boxplots of hamming distance according to the degree o
 ```bash
 Rscript run.R -x "misspecify"
 ```
+
+## 4. experiment_type == "highdim" (Table 2.)
+
+The experiment is to show high dimensional experiments.
+
+```bash
+Rscript run.R -x "highdim" -k 7
+```
+### description of passing variables.
+
+Rscript run.R
+
+-x "highdim" : it indicates that the experiment is for high dimensional experiments.
+
+-k c(1,2,3,4,5,6,7) : choosing k = 1, 2, 3, 4, 5, 6, or 7.
+
+
+## 5. experiment_type == "bias" (Table 3.)
+
+The experiment is to measure bias of the assumption.
+
+```bash
+Rscript run.R -x "bias" -i 0.5
+```
+### description of passing variables.
+
+Rscript run.R
+
+-x "bias" : it indicates that the experiment is for measuring bias of the assumption.
+
+-i 0:9/10 : choosing eps = 0, 0.1, ... , or 0.9.
+
+
+## 6. experiment_type == "td" 
+
+The experiment is to compare performance between TD and ITD.
+
+```bash
+Rscript run.R -x "td" 
+```
+
+## 7. experiment_type == "increasing"
+
+The experiment is to show weakly increasing error variance cases.
+
+```bash
+Rscript run.R -x "increasing" -i 0.5
+```
+### description of passing variables.
+
+Rscript run.R
+
+-x "increasing" : it indicates that the experiment is for weakly increasing error variance cases.
+
+-i 0:9/10 : choosing eps = 0, 0.1, ... , or 0.9.
